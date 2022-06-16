@@ -35,7 +35,7 @@ public class DieRoll {
 		this.nsides = nsides;
 		this.bonus = bonus;
 	}
-
+//minh ga part 2
 	public RollResult makeRoll() {
 		RollResult r = new RollResult(bonus);
 		for (int i = 0; i < ndice; i++) {
