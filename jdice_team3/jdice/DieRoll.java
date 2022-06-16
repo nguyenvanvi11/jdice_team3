@@ -29,7 +29,7 @@ public class DieRoll {
 	static {
 		rnd = new Random();
 	}
-//Minh ga
+
 	public DieRoll(int ndice, int nsides, int bonus) {
 		this.ndice = ndice;
 		this.nsides = nsides;
