@@ -1,3 +1,4 @@
+package jdice;
 
 /*
 JDice: Java Dice Rolling Program
