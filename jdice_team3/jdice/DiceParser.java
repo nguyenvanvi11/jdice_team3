@@ -1,3 +1,5 @@
+package jdice;
+
 import java.util.*;
 /*
 JDice: Java Dice Rolling Program
@@ -27,7 +29,7 @@ public class DiceParser{
 	public StringStream(String s){
 	    buff=new StringBuffer();
 	}
-//	private void munchWhiteSpace() {
+	private void munchWhiteSpace() {
 	    int index=0;
 	    char curr;
 	    while(index<buff.length()){
@@ -43,12 +45,12 @@ public class DiceParser{
 	    return buff.toString().equals("");
 	}
 	public Integer getInt(){
-	    readInt();
+	    return readInt();
 	}
 	public Integer readInt(){
 	    int index=0;
 	    char curr;
-	    munchWhiteSpace()
+	    munchWhiteSpace();
 	    while(index<buff.length()){
 		curr=buff.charAt(index);
 		if(!Character.isDigit(curr))

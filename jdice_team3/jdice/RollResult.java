@@ -1,3 +1,4 @@
+package jdice;
 import java.util.*;
 /*
 JDice: Java Dice Rolling Program
@@ -19,9 +20,14 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
  */
+//nguyenvanvi
 
 
+<<<<<<< HEAD:jdice_team3/RollResult.java
 public class RollResult {
+=======
+public class RollResult{
+>>>>>>> origin/develop:jdice_team3/jdice/RollResult.java
     int total;
     int modifier;
     Vector<Integer> rolls;
