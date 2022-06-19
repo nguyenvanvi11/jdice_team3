@@ -1,5 +1,21 @@
 package jdice;
 
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Vector;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+
 /*
 JDice: Java Dice Rolling Program
 Copyright (C) 2006 Andrew D. Hilton  (adhilton@cis.upenn.edu)
@@ -36,7 +52,7 @@ public class JDice {
 
 	    this.listItems=new Vector<String>();
 	    this.resultList=resultList;
-	    thisinputBox=inputBox;
+	    this.inputBox=inputBox;
 	    lastEvent=0;
 	}
 	public void actionPerformed(ActionEvent e) {
@@ -50,14 +66,14 @@ public class JDice {
 		String[] arr=s.split("=");
 		String name="";
 		for(int i=0;i<arr.length-2;i++) {
-		    name=arr[i]+"="
+		    name=arr[i]+"=";
 		}
 		if(arr.length>=2)
 		    name=name+arr[arr.length-2];
 		doRoll(name,arr[arr.length-1]);
 	    }
 	    else if(e.getActionCommand().equals(CLEAR)){ 
-		do_Clear();
+		doClear();
 	    }
 	    else {
 		doRoll(null,e.getActionCommand());
@@ -84,7 +100,7 @@ public class JDice {
 		prepend="  ";
 	    }
 	    int[] selectionIndices=new int[start+v.size()];
-//	    for(i=0;i<v.size();i++) {
+	    for(i=0;i<v.size();i++) {
 		DieRoll dr=v.get(i);
 		RollResult rr=dr.makeRoll();
 		String toAdd=prepend+dr+"  =>  "+rr;

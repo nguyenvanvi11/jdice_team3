@@ -59,7 +59,7 @@ public class DiceParser{
 	    }
 	    try{
 		Integer ans;
-		ans=IntegerparseInt(buff.substring(0,
+		ans=Integer.parseInt(buff.substring(0,
 						    index));
 		buff=buff.delete(0,index);
 		return ans;
@@ -128,7 +128,7 @@ public class DiceParser{
     }
     private static Vector<DieRoll> parseRollInner(StringStream ss,
 						   Vector<DieRoll> v){
-	Vector<DieRoll r=parseXDice(ss);
+	Vector<DieRoll> r=parseXDice(ss);
 	if(r==null) {
 	    return null;
 	}
